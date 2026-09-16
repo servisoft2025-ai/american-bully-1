@@ -1,0 +1,16 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel de Coach | Américan Bully</title><link rel="stylesheet" href="styles.css"></head><body><header><div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/logo.jpg"><span>AMÉRICAN BULLY</span></a>
+      <button class="burger" aria-label="Abrir menú">☰</button>
+      <nav class="menu"><a class="" href="index.html">INICIO</a><a class="" href="box.html">EL BOX</a><a class="" href="programacion.html">PROGRAMACIÓN</a><a class="" href="horarios.html">HORARIOS</a><a class="" href="coach.html">COACH</a><a class="" href="contacto.html">CONTACTO</a><a class="" href="faq.html">FAQ</a><a class="login" href="login.html">🔐 ACCESO</a></nav>
+    </div></header><main>
+<section class="page"><div class="wrap"><div class="page-head"><div class="kicker">ÁREA PRIVADA</div><h2>PANEL DE COACH</h2><p>Gestión de programación y estructura del box.</p></div>
+<div class="two"><form class="form" onsubmit="saveWorkout(event)" style="max-width:none"><h3>📅 CREAR / EDITAR WORKOUT</h3>
+<label>Mes</label><input id="month" placeholder="Septiembre 2026" required><label>Semana</label><input id="week" placeholder="Semana 1" required>
+<label>Día</label><select id="day"><option>LUNES</option><option>MARTES</option><option>MIÉRCOLES</option><option>JUEVES</option><option>VIERNES</option><option>SÁBADO</option></select>
+<label>Workout</label><textarea id="workout" rows="7" placeholder="Ej.: CALENTAMIENTO · FUERZA · WOD · ACCESORIOS" required></textarea>
+<button class="btn primary" type="submit">PUBLICAR WORKOUT</button><p id="coachMsg" class="success"></p></form>
+<div><div class="card"><h3>👥 ATLETAS</h3><p>Crear usuario, editar datos y eliminar usuarios con confirmación.</p></div><div class="card" style="margin-top:14px"><h3>🎥 BIBLIOTECA</h3><p>Crear, editar, agregar videos y eliminar movimientos.</p></div><div class="card" style="margin-top:14px"><h3>📊 RESULTADOS</h3><p>Consultar resultados registrados por los atletas.</p></div></div></div>
+<div style="margin-top:35px"><h3>PROGRAMACIÓN ACTUAL</h3><div id="programTree" style="margin-top:16px"></div></div>
+<div class="actions"><button class="btn" onclick="logout()">🚪 CERRAR SESIÓN</button></div></div></section></main>
+<footer>AMÉRICAN BULLY · NO PAIN. NO GAIN.</footer><script src="app.js"></script><script>if(guard("COACH"))renderProgram();</script></body></html>
